@@ -5,13 +5,19 @@ import {
   ValuesSection,
   FeatureListSection,
   CTASection,
+  MissionVisionSection,
 } from "@/components/sections";
-import { values, differentiators } from "@/data/values";
+import {
+  values,
+  differentiators,
+  brandValues,
+  targetAudience,
+} from "@/data/values";
 
 export const metadata: Metadata = {
   title: "Nosotros",
   description:
-    "Empresa especializada en fabricación, ejecución e instalación de soluciones a medida para proyectos de interior y obra. Enfoque en cumplimiento técnico y eficiencia.",
+    "Empresa especializada en fabricación, ejecución e instalación de soluciones a medida para proyectos residenciales y comerciales. Enfoque en cumplimiento técnico y eficiencia.",
 };
 
 export default function AboutPage() {
@@ -20,10 +26,10 @@ export default function AboutPage() {
       <PageHeroSection
         title="Sobre nosotros"
         highlightedText="nosotros"
-        description="Empresa especializada en la fabricación, ejecución e instalación de soluciones a medida para proyectos de interior y obra. Nos enfocamos en el cumplimiento técnico y la eficiencia, trabajando con empresas, estudios de arquitectura, constructoras y desarrolladores inmobiliarios."
+        description="Empresa especializada en la fabricación, ejecución e instalación de soluciones a medida para proyectos residenciales y comerciales. Nos enfocamos en el cumplimiento técnico y la eficiencia, trabajando con empresas, estudios de arquitectura, constructoras y desarrolladores inmobiliarios."
       />
 
-      {/* Mission Section */}
+      {/* Section 02 - Nuestra forma de trabajo */}
       <section className=" w-full">
         <div className="relative w-full">
           {/* Image Side - Takes left portion */}
@@ -51,15 +57,11 @@ export default function AboutPage() {
 
                 <div className="space-y-4 text-base md:text-lg text-gray-300 leading-relaxed">
                   <p>
-                    En aradiz, no nos dedicamos al diseño arquitectónico, sino a
-                    la{" "}
-                    <strong className="text-white">
-                      ejecución profesional
-                    </strong>{" "}
-                    de las soluciones que nuestros clientes necesitan.
-                    Trabajamos con especificaciones técnicas precisas y nos
-                    comprometemos con el cumplimiento de plazos y estándares de
-                    calidad.
+                    En aradiz convertimos las especificaciones técnicas de
+                    nuestros clientes en resultados concretos. Nuestra
+                    especialidad es la ejecución profesional — fabricamos e
+                    instalamos con precisión, dentro de los plazos y estándares
+                    acordados.
                   </p>
                   <p>
                     Nuestro enfoque está en la{" "}
@@ -83,22 +85,46 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Section 03 - Misión y Visión */}
+      <MissionVisionSection />
+
+      {/* Section 04 - Nuestros Valores */}
       <ValuesSection
         title="Nuestros valores"
-        description="Principios que guían nuestro trabajo diario y garantizan la satisfacción de nuestros clientes."
-        values={values}
+        description="Principios que definen quiénes somos y cómo construimos cada proyecto."
+        values={brandValues}
+        className="py-16 md:py-24 bg-card"
       />
 
+      {/* Section 05 - Cómo trabajamos (antes 'Nuestros Valores') */}
+      <ValuesSection
+        title="Como trabajamos"
+        description="Principios que guian nuestra operacion diaria y garantizan la satisfaccion de nuestros clientes."
+        values={values}
+        className="py-16 md:py-24 bg-background"
+      />
+
+      {/* Section 06 - ¿Por qué elegirnos? */}
       <FeatureListSection
         title="¿Por qué elegirnos?"
         description="Características que nos diferencian en el mercado B2B"
         features={differentiators}
+        className="py-16 md:py-24 bg-foreground"
+        titleClassName="text-background"
+        descriptionClassName="text-gray-400"
+        itemClassName="text-gray-200"
       />
 
-      <CTASection
-        title="Trabajemos juntos en tu próximo proyecto"
-        description="Contáctanos para conversar sobre cómo podemos ayudarte a ejecutar tu proyecto con la calidad y profesionalismo que necesitas."
+      {/* Section 07 - A quién servimos */}
+      <ValuesSection
+        title="Para Quiénes Trabajamos"
+        description="Trabajamos con empresas y personas que exigen ejecucion de alto nivel."
+        values={targetAudience}
+        className="py-16 md:py-24 bg-card"
       />
+
+      {/* Section 08 - CTA Final */}
+      <CTASection />
     </>
   );
 }
