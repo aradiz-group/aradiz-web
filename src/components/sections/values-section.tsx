@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Target, Users, Award, TrendingUp, LucideIcon } from "lucide-react";
+import { Target, Users, Award, TrendingUp, Crosshair, ShieldCheck, Sparkles, CheckSquare, Building2, Building, PencilRuler, Home, LucideIcon } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 // Map of icon names to components for resolving string references
@@ -10,6 +10,14 @@ const iconMap: Record<string, LucideIcon> = {
     Users,
     Award,
     TrendingUp,
+    Crosshair,
+    ShieldCheck,
+    Sparkles,
+    CheckSquare,
+    Building2,
+    Building,
+    PencilRuler,
+    Home,
 };
 
 export interface Value {
