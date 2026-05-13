@@ -124,10 +124,7 @@ export default function AboutPage() {
       />
 
       {/* Section 08 - CTA Final */}
-      <CTASection
-        title="Trabajemos juntos en tu próximo proyecto"
-        description="Contáctanos para conversar sobre cómo podemos ayudarte a ejecutar tu proyecto con la calidad y profesionalismo que necesitas."
-      />
+      <CTASection />
     </>
   );
 }
